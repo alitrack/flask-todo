@@ -33,5 +33,6 @@ def put_edit(item_id: int):
 @app.delete("/delete/<item_id>")
 def delete(item_id: int):
     delete_todo(item_id)
-    todos = get_todos()
-    return render_template("todo/items.html",todo=todos)
+    return ""
+    # todos = get_todos()
+    # return render_template("todo/items.html",todo=todos)

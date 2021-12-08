@@ -18,7 +18,10 @@
       </div>
     </form>
       <ul id="todoItems" class="uk-list uk-list-divider" hx-target="closest li" hx-swap="outerHTML">
-        {{  render_partial('todo/items.html', todos=todos) }}
+        <!-- {{  render_partial('todo/items.html', todos=todos) }} -->
+        {% for todo in todos %}
+        {% include 'todo/item.html' with context %}
+        {% endfor %}
     </ul>
   </div>
 {% endblock %}
